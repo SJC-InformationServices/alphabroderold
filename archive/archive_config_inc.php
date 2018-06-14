@@ -1,17 +1,14 @@
 <?php
+$root = $_SERVER["DOCUMENT_ROOT"];
+require_once "$root"."/vendor/autoload.php";
+
+$dir = sys_get_temp_dir();
+session_save_path($dir);
+
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 ini_set('display_errors', 1);
 ini_set('display_errors', 'On');
-/*function archiveloader ($class){
-	if(is_file(dirname(__FILE__)."/archive/$class/$class.php"))
-	{
-	include dirname(__FILE__)."/archive/$class/$class.php";
-	}else{
-		//error_log("Failed to load Class $class");
-		//dirname(__FILE__)."/$class/$class.php\n";
-	}
-}
-spl_autoload_register("archiveloader");*/
+
 
 $archiveconfig = array(
 	"archivedbserver"=>'sjcthearchive.cb1qb4plxjpf.us-east-1.rds.amazonaws.com',

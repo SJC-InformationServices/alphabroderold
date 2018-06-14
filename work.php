@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -6,61 +9,23 @@
 		
 		
 		
-<link rel="stylesheet" type="text/css" href="lib/DataTables/Bootstrap-3.3.6/css/bootstrap.css"/>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<link rel="stylesheet" type="text/css" href="lib/DataTables/Quill-0.20.1/quill.snow.css"/>
-<link rel="stylesheet" type="text/css" href="lib/DataTables/Select2-4.0.1/css/select2.css"/>
-<link rel="stylesheet" type="text/css" href="lib/DataTables/Selectize-0.12.1/css/selectize.css"/>
-<link rel="stylesheet" type="text/css" href="lib/DataTables/DataTables-1.10.12/css/dataTables.bootstrap.css"/>
-<link rel="stylesheet" type="text/css" href="lib/DataTables/AutoFill-2.1.2/css/autoFill.bootstrap.min.css"/>
-<link rel="stylesheet" type="text/css" href="lib/DataTables/Buttons-1.2.1/css/buttons.bootstrap.css"/>
-<link rel="stylesheet" type="text/css" href="lib/DataTables/ColReorder-1.3.2/css/colReorder.bootstrap.css"/>
-<link rel="stylesheet" type="text/css" href="lib/DataTables/Editor-1.5.6/css/editor.bootstrap.css"/>
-<link rel="stylesheet" type="text/css" href="lib/DataTables/FieldType-Quill-1.5.6/editor.quill.css"/>
-<link rel="stylesheet" type="text/css" href="lib/DataTables/FieldType-Select2-1.5.6/editor.select2.css"/>
-<link rel="stylesheet" type="text/css" href="lib/DataTables/FieldType-Selectize-1.5.6/editor.selectize.css"/>
-<link rel="stylesheet" type="text/css" href="lib/DataTables/FieldType-Title-1.5.6/editor.title.css"/>
-<link rel="stylesheet" type="text/css" href="lib/DataTables/FixedColumns-3.2.2/css/fixedColumns.bootstrap.css"/>
-<link rel="stylesheet" type="text/css" href="lib/DataTables/FixedHeader-3.1.2/css/fixedHeader.bootstrap.css"/>
-<link rel="stylesheet" type="text/css" href="lib/DataTables/KeyTable-2.1.2/css/keyTable.bootstrap.css"/>
-<link rel="stylesheet" type="text/css" href="lib/DataTables/Responsive-2.1.0/css/responsive.bootstrap.css"/>
-<link rel="stylesheet" type="text/css" href="lib/DataTables/RowReorder-1.1.2/css/rowReorder.bootstrap.css"/>
-<link rel="stylesheet" type="text/css" href="lib/DataTables/Scroller-1.4.2/css/scroller.bootstrap.css"/>
-<link rel="stylesheet" type="text/css" href="lib/DataTables/Select-1.2.0/css/select.bootstrap.css"/>
-<link rel="stylesheet" href="lib/style/archive.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-<script type="application/javascript" src="lib/alloy-ui/aui/aui.js"></script>
-<script type="text/javascript" src="lib/DataTables/jQuery-2.2.3/jquery-2.2.3.js"></script>
-<script type="text/javascript" src="lib/DataTables/Bootstrap-3.3.6/js/bootstrap.js"></script>
-<script type="text/javascript" src="lib/DataTables/MomentJS-2.13.0/moment.js"></script>
-<script type="text/javascript" src="lib/DataTables/jquery-mask-1.13.4/dist/jquery.mask.js"></script>
-<script type="text/javascript" src="lib/DataTables/Quill-0.20.1/quill.js"></script>
-<script type="text/javascript" src="lib/DataTables/Select2-4.0.1/js/select2.js"></script>
-<script type="text/javascript" src="lib/DataTables/Selectize-0.12.1/js/standalone/selectize.js"></script>
-<script type="text/javascript" src="lib/DataTables/DataTables-1.10.12/js/jquery.dataTables.js"></script>
-<script type="text/javascript" src="lib/DataTables/DataTables-1.10.12/js/dataTables.bootstrap.js"></script>
-<script type="text/javascript" src="lib/DataTables/AutoFill-2.1.2/js/dataTables.autoFill.js"></script>
-<script type="text/javascript" src="lib/DataTables/AutoFill-2.1.2/js/autoFill.bootstrap.js"></script>
-<script type="text/javascript" src="lib/DataTables/Buttons-1.2.1/js/dataTables.buttons.js"></script>
-<script type="text/javascript" src="lib/DataTables/Buttons-1.2.1/js/buttons.bootstrap.js"></script>
-<script type="text/javascript" src="lib/DataTables/Buttons-1.2.1/js/buttons.colVis.js"></script>
-<script type="text/javascript" src="lib/DataTables/Buttons-1.2.1/js/buttons.print.js"></script>
-<script type="text/javascript" src="lib/DataTables/ColReorder-1.3.2/js/dataTables.colReorder.js"></script>
-<script type="text/javascript" src="lib/DataTables/Editor-1.5.6/js/dataTables.editor.js"></script>
-<script type="text/javascript" src="lib/DataTables/Editor-1.5.6/js/editor.bootstrap.js"></script>
-<script type="text/javascript" src="lib/DataTables/FieldType-Display-1.5.6/editor.display.js"></script>
-<script type="text/javascript" src="lib/DataTables/FieldType-Mask-1.5.6/editor.mask.js"></script>
-<script type="text/javascript" src="lib/DataTables/FieldType-Quill-1.5.6/editor.quill.js"></script>
-<script type="text/javascript" src="lib/DataTables/FieldType-Select2-1.5.6/editor.select2.js"></script>
-<script type="text/javascript" src="lib/DataTables/FieldType-Selectize-1.5.6/editor.selectize.js"></script>
-<script type="text/javascript" src="lib/DataTables/FieldType-Title-1.5.6/editor.title.js"></script>
-<script type="text/javascript" src="lib/DataTables/FixedColumns-3.2.2/js/dataTables.fixedColumns.js"></script>
-<script type="text/javascript" src="lib/DataTables/FixedHeader-3.1.2/js/dataTables.fixedHeader.js"></script>
-<script type="text/javascript" src="lib/DataTables/KeyTable-2.1.2/js/dataTables.keyTable.js"></script>
-<script type="text/javascript" src="lib/DataTables/Responsive-2.1.0/js/dataTables.responsive.js"></script>
-<script type="text/javascript" src="lib/DataTables/RowReorder-1.1.2/js/dataTables.rowReorder.js"></script>
-<script type="text/javascript" src="lib/DataTables/Scroller-1.4.2/js/dataTables.scroller.js"></script>
-<script type="text/javascript" src="lib/DataTables/Select-1.2.0/js/dataTables.select.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs-3.3.7/jq-3.3.1/jszip-2.5.0/dt-1.10.17/af-2.3.0/b-1.5.2/b-colvis-1.5.1/b-html5-1.5.2/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.4.0/r-2.2.2/rg-1.0.3/rr-1.2.4/sc-5.04.4/sl-1.2.6/datatables.min.css"/>
+
+<link rel="stylesheet" href="https://s3.amazonaws.com/sjcarchiveassets/alphabroderold/style/archive.css">
+
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs-3.3.7/jq-3.3.1/jszip-2.5.0/dt-1.10.17/af-2.3.0/b-1.5.2/b-colvis-1.5.1/b-html5-1.5.2/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.4.0/r-2.2.2/rg-1.0.3/rr-1.2.4/sc-5.04.4/sl-1.2.6/datatables.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://cdn.alloyui.com/3.0.1/aui/aui-min.js"></script>
+<script src="https://s3.amazonaws.com/sjcarchiveassets/lib/DataTables/Editor-1.7.2/js/editor.bootstrap.min.js"></script>
 
 
 	</head>
