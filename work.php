@@ -1,5 +1,15 @@
 <?php
-
+	require_once "archive/archive_config_inc.php";
+	if(isset($_SESSION['LOGGEDIN']) ) {
+		if(validateToken($_SESSION['TOKEN'])){
+			
+		}else{
+			header("Location: /");
+		}
+	}
+	else{
+		header("Location: /");
+	}
 ?>
 <!DOCTYPE html>
 <html>

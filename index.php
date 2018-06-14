@@ -38,6 +38,8 @@ if(isset($_SESSION['LOGGEDIN']) ) {
 elseif(isset($_POST['username']) && isset($_POST['password']) ) {
     if($login = login($_POST['username'],$POST['password'])){
         header("Location: /active/");
+    }else{
+        header
     }
 }
 
