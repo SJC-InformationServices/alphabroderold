@@ -48,7 +48,7 @@ function login($username, $password) {
 	->getToken(); // Retrieves the generated token
 	  $_SESSION['LOGGEDIN']=true;
 	  $_SESSION['TOKEN'] = $token;
-    return true;
+    return $token;
   } else {
     return false;
   }
