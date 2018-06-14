@@ -14,7 +14,7 @@ ini_set('display_errors', 'On');
 
 
 $archiveconfig = array(
-	"archivedbserver"=>'sjcthearchive.cb1qb4plxjpf.us-east-1.rds.amazonaws.com',
+	"archivedbserver"=>'sjc-archive-prod.cluster-cpi3jpipzm32.us-east-1.rds.amazonaws.com',
 	"archivedbuser"=>'',
 	"archivedbpass"=>'',
 	"archivedb"=>'sjcAlphaBroderArchive',
