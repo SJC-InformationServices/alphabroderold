@@ -2,10 +2,8 @@
 
 $root = $_SERVER["DOCUMENT_ROOT"];
 require_once "$root"."/vendor/autoload.php";
-use Lcobucci\JWT\Configuration;
+use Lcobucci\JWT\Builder;
 use Lcobucci\JWT\ValidationData;
-$config = new Configuration();
-$signer = $config->getSigner(); // Default signer is HMAC SHA256
 
 $dir = sys_get_temp_dir();
 session_save_path($dir);
@@ -38,7 +36,7 @@ function login($username, $password) {
 
   if (!$conn->connect_error) 
   {
-	$token = $config->createBuilder()
+	$token = (new Builder())
 	->setIssuer('https://sjcalphabroder.us-east-1.elasticbeanstalk.com') // Configures the issuer (iss claim)
 	->setAudience('https://sjcalphabroder.us-east-1.elasticbeanstalk.com') // Configures the audience (aud claim)
 	->setId('4f1g23a12aa', true) // Configures the id (jti claim), replicating as a header item
