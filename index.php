@@ -30,8 +30,16 @@ header('Last-Modified: ' . gmdate('D, d M Y H:i:s', filemtime(__FILE__)) . ' GMT
 header("Cache-Control: public");
 header("Pragma: public");
 
-
-
+if(isset($_SESSION['LOGGEDIN']) ) {
+    if(validateToken($_SESSION['TOKEN'])){
+        header("Location: /active/");
+    }
+}
+elseif(isset($_POST['username']) && isset($_POST['password']) ) {
+    if($login = login($_POST['username'],$POST['password'])){
+        header("Location: /active/");
+    }
+}
 
 ?>
 <!DOCTYPE HTML>
@@ -43,9 +51,9 @@ header("Pragma: public");
 <meta name="viewport" 
 content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="" rel="shortcut icon">
-          <title>SJC Web Archive</title>
+          <title>SJC Alpha Broder Web Archive</title>
           
-<link rel="stylesheet" 
+<link rel="stylesheet" A
 href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
 integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
 crossorigin="anonymous">
@@ -144,7 +152,7 @@ body {
 
 <form 
 class="form-signin" 
-action="<?php echo $_SERVER['PHP_SELF']; ?>" 
+action="/login/" 
 method="post" name="form1" id="form1" 
 ENCTYPE = 
 "multipart/form-data"  | "application/x-www-form-urlencoded" | "text/plain" 
