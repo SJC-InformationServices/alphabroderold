@@ -30,13 +30,11 @@ header('Last-Modified: ' . gmdate('D, d M Y H:i:s', filemtime(__FILE__)) . ' GMT
 header("Cache-Control: public");
 header("Pragma: public");
 
-/*if(isset($_POST['username']) && isset($_POST['passwd']) ) {
-    if($login = login($_POST['username'],$POST['passwd'])){
+if(isset($_POST['username']) && isset($_POST['passwd']) ) {
+    if(login($_POST['username'],$POST['passwd'])){
         header("Location: /active/");
-    }else{
-        
     }
-}*/
+}
 
 ?>
 <!DOCTYPE HTML>

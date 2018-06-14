@@ -36,7 +36,7 @@ function login($username, $password) {
 
   if (!$conn->connect_error) 
   {
-	$token = (new Builder())
+	/*$token = (new Builder())
 	->setIssuer('https://sjcalphabroder.us-east-1.elasticbeanstalk.com') // Configures the issuer (iss claim)
 	->setAudience('https://sjcalphabroder.us-east-1.elasticbeanstalk.com') // Configures the audience (aud claim)
 	->setId('4f1g23a12aa', true) // Configures the id (jti claim), replicating as a header item
@@ -48,7 +48,8 @@ function login($username, $password) {
 	->getToken(); // Retrieves the generated token
 	  $_SESSION['LOGGEDIN']=true;
 	  $_SESSION['TOKEN'] = $token;
-    return $token;
+	  */
+    return true;
   } else {
     return false;
   }
