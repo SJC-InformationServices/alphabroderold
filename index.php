@@ -35,8 +35,8 @@ if(isset($_SESSION['LOGGEDIN']) ) {
         header("Location: /active/");
     }
 }
-elseif(isset($_POST['username']) && isset($_POST['password']) ) {
-    if($login = login($_POST['username'],$POST['password'])){
+elseif(isset($_POST['username']) && isset($_POST['passwd']) ) {
+    if($login = login($_POST['username'],$POST['passwd'])){
         header("Location: /active/");
     }else{
         
@@ -184,6 +184,8 @@ autocomplete="off">
       </button>
       <p class="mt-5 mb-3 text-muted text-center">© 2017-2018</p>
     </form>
-
+    <?php
+    print_r($_SESSION);
+    ?>
      </body>
 </html>
