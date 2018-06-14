@@ -1,6 +1,6 @@
 branch-defaults:
   master:
-    environment: alphabroderdb
+    environment: sjcAlphaBroder
 environment-defaults:
   sjcarchiveadmin:
     branch: null
