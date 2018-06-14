@@ -31,8 +31,8 @@ header("Cache-Control: public");
 header("Pragma: public");
 
 if(isset($_POST['username']) && isset($_POST['passwd']) ) {
-    if(login($_POST['username'],$POST['passwd'])){
-        header("Location: /active/");
+    if(login($_POST['username'], $POST['passwd']) ) {
+        header("Location: https://sjcalphabroder.us-east-1.elasticbeanstalk.com/active/");
     }
 }
 
