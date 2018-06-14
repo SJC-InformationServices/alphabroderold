@@ -52,9 +52,9 @@ function login($username, $password) {
 	  $_SESSION['LOGGEDIN']=true;
 	  $_SESSION['TOKEN'] = $token;
 	  */
-    return true;
+    
   } else {
-    return false;
+    
   }
 }
 

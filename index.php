@@ -29,7 +29,7 @@ require_once "archive/archive_config_inc.php";
 header('Last-Modified: ' . gmdate('D, d M Y H:i:s', filemtime(__FILE__)) . ' GMT');
 header("Cache-Control: public");
 header("Pragma: public");
-
+print_r($_POST);
 if(isset($_POST['username']) && isset($_POST['passwd']) ) {
     if(login($_POST['username'], $POST['passwd']) ) {
         header("Location: https://sjcalphabroder.us-east-1.elasticbeanstalk.com/active/");
