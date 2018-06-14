@@ -154,7 +154,7 @@ body {
 
 <form 
 class="form-signin" 
-action="/login/" 
+action="/" 
 method="post" name="form1" id="form1" 
 ENCTYPE = 
 "multipart/form-data"  | "application/x-www-form-urlencoded" | "text/plain" 
