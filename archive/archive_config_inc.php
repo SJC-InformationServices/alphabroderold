@@ -32,8 +32,11 @@ function login($username, $password) {
 	global $archiveconfig;
 	$s = $archiveconfig['archivedbserver'];
 	$d = $archiveconfig['archivedb'];
-	$conn = @new Mysqli($s, $username, $password, $d, 3306);
-
+    try {
+        $conn = @new Mysqli($s, $username, $password, $d, 3306);
+    }catch(exception $e){
+		print_r($e);
+	}
   if (!$conn->connect_error) 
   {
 	/*$token = (new Builder())
