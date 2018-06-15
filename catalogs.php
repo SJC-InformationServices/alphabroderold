@@ -6,6 +6,8 @@ $path = ltrim($_SERVER['REQUEST_URI'], '/');    // Trim leading slash(es)
 $name = 'alpha_catalogs';
 
 $path = substr($path,strpos($path,$name));
+echo "$path";
+/*
 try{
 	$API = new archive($path, null,$archiveconfig);
     echo $API->processAPI();
@@ -14,7 +16,7 @@ try{
 catch (Exception $e){
 	  echo json_encode(Array('error' => $e->getMessage()));
 	}
-	
+*/	
 
 
 ?>
