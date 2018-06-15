@@ -37,24 +37,12 @@ function login($username, $password) {
     }catch(exception $e){
 		print_r($e);
 	}
-  if (!$conn->connect_error) 
-  {
-	/*$token = (new Builder())
-	->setIssuer('https://sjcalphabroder.us-east-1.elasticbeanstalk.com') // Configures the issuer (iss claim)
-	->setAudience('https://sjcalphabroder.us-east-1.elasticbeanstalk.com') // Configures the audience (aud claim)
-	->setId('4f1g23a12aa', true) // Configures the id (jti claim), replicating as a header item
-	->setIssuedAt(time()) // Configures the time that the token was issue (iat claim)
-	->setNotBefore(time() + 1) // Configures the time that the token can be used (nbf claim)
-	->setExpiration(time() + 3600) // Configures the expiration time of the token (exp claim)
-	->set('uid', 1) // Configures a new claim, called "uid"
-	->sign($signer, 'testing') // creates a signature using "testing" as key
-	->getToken(); // Retrieves the generated token
-	  $_SESSION['LOGGEDIN']=true;
-	  $_SESSION['TOKEN'] = $token;
-	  */
-    
+  if (!$conn->connect_error) {
+	$_SESSION['loggedin'] = "TRUE";
+   return true; 
   } else {
-    
+	session_destroy();
+    return false
   }
 }
 

@@ -4,11 +4,10 @@ RewriteEngine On
 RewriteRule ^/archive/alpha_catalogs/.*$. /archive/alpha_catalogs/index.php [L,P]
 RewriteRule ^/archive/alpha_styles/.*$. /archive/alpha_styles/index.php [L,P]
 RewriteRule ^/archive/alpha_colors/.*$. /archive/alpha_colors/index.php [L,P]
-
+RewriteRule ^/active/.*$. dowork.php [L]
 #RewriteRule ^sjcarchiveassets/.*$ https://s3.amazonaws.com/sjcarchiveassets/$1 [L,P]
 
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} ![-d
+RewriteCond %{REQUEST_FILENAME} ]!-f
 
 RewriteRule . index.php [L]
-i
