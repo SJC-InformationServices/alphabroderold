@@ -32,7 +32,7 @@ function login($username, $password) {
 	$s = $archiveconfig['archivedbserver'];
 	$d = $archiveconfig['archivedb'];
     try {
-		$conn = @new Mysqli($s, $username, $password, $d, 3306);
+		$conn = new Mysqli($s, $username, $password, $d, 3306);
 		$_SESSION['LOGGEDIN'] = "TRUE";
 		return true;
 	}catch(exception $e){
