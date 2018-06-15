@@ -1,7 +1,7 @@
 <?php
 	require_once "archive/archive_config_inc.php";
-	if( ( isset($_SERVER['PHP_AUTH_USER'] ) && ( $_SERVER['PHP_AUTH_USER'] == "sjcBroderProduction@stjoseph.com" ) ) AND
-      ( isset($_SERVER['PHP_AUTH_PW'] ) && ( $_SERVER['PHP_AUTH_PW'] == "15BentonRoad!" )) )
+	if( ( isset($_SERVER['PHP_AUTH_USER'] ) && ( $_SERVER['PHP_AUTH_USER'] == "leon" ) ) AND
+      ( isset($_SERVER['PHP_AUTH_PW'] ) && ( $_SERVER['PHP_AUTH_PW'] == "secret" )) )
     {
 	   ?>
 		<!DOCTYPE html>
