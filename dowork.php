@@ -57,6 +57,7 @@ if (!isset($_SESSION['LOGGEDIN']) || !$_SESSION['LOGGEDIN'] ) {
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <script src="https://cdn.alloyui.com/3.0.1/aui/aui-min.js"></script>
+<script src="https://s3.amazonaws.com/sjcarchiveassets/lib/DataTables/Editor-1.7.2/js/dataTables.editor.min.js"></script>
 <script src="https://s3.amazonaws.com/sjcarchiveassets/lib/DataTables/Editor-1.7.2/js/editor.bootstrap.min.js"></script>
 
 
