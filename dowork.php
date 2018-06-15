@@ -27,6 +27,8 @@ require_once "archive/archive_config_inc.php";
 if (!isset($_SESSION['LOGGEDIN']) || !$_SESSION['LOGGEDIN'] ) {
     $_SESSION['LOGGEDIN'] = true;
     header("Location: index.php");
+}else{
+  session_regenerate_id();
 }
 
 
@@ -84,7 +86,7 @@ if (!isset($_SESSION['LOGGEDIN']) || !$_SESSION['LOGGEDIN'] ) {
   YUI.GlobalConfig = {
   groups: {
    yui2: {
-    base: 'lib/yui2in3/',
+    base: 'https://s3.amazonaws.com/sjcarchiveassets/alphabroderold/yui2in3/',
     patterns: {
      'yui2-': {
       configFn: function(me) {
