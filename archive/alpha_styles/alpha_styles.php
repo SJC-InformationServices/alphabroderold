@@ -1,6 +1,6 @@
 <?php
 
-include "$root/archive/archive_api/archive_api.php";
+include "$archiveroot/archive/archive_api/archive_api.php";
 
 class archive extends archive_api
 {
