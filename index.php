@@ -1265,7 +1265,7 @@ require_once "archive/archive_config_inc.php";
  </body>
 </html>
     <?php
-} else {
+/*} else {
         //Send headers to cause a browser to request
         //username and password from user
         header("WWW-Authenticate: " . "Basic realm=\"Leon's Protected Area\"");
@@ -1277,5 +1277,5 @@ require_once "archive/archive_config_inc.php";
             "Authentication.<br>\nUse <b>leon</b> " .
             "for the username, and <b>secret</b> " .
             "for the password.<br>\n");
-} 
+} */
 ?>
