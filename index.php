@@ -25,17 +25,14 @@
  */ 
 require_once "archive/archive_config_inc.php";
 
-
+if(isset($_POST['username']) && isset($_POST['passwd']) ) {
+    if(login($_POST['username'], $POST['passwd']) ) {
+        header("Location: dowork.php");
+    }
+}
 header('Last-Modified: ' . gmdate('D, d M Y H:i:s', filemtime(__FILE__)) . ' GMT');
 header("Cache-Control: public");
 header("Pragma: public");
-
-if(isset($_POST['username']) && isset($_POST['passwd']) ) {
-    if(login($_POST['username'], $POST['passwd']) ) {
-        header("Location: https://sjcalphabroder.us-east-1.elasticbeanstalk.com/active/");
-    }
-}
-
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -147,7 +144,7 @@ body {
 
 <form 
 class="form-signin" 
-action="/" 
+action="" 
 method="post" name="form1" id="form1" 
 ENCTYPE = 
 "multipart/form-data"  | "application/x-www-form-urlencoded" | "text/plain" 
@@ -157,7 +154,7 @@ autocomplete="off">
         src="https://s3.amazonaws.com/sjcarchiveassets/lib/images/logo.jpg" 
         alt="Logo" 
         height="72px">
-        <div id='error' class='error'></div>
+        <div id='error' class='error'><?php print_r($_POST);print_r($_SESSION);?></div>
       </div>
       <div class="form-label-group">
         <input id="inputEmail" class="form-control" 
