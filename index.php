@@ -23,7 +23,7 @@
  * @since      File available since Release 1.2.0
  * @deprecated File deprecated in Release 2.0.0
  */ 
-require_once "archive/archive_config_inc.php";
+/*require_once "archive/archive_config_inc.php";
 
 if(isset($_POST['username']) && isset($_POST['passwd']) ) {
     if(login($_POST['username'], $POST['passwd']) ) {
@@ -32,7 +32,7 @@ if(isset($_POST['username']) && isset($_POST['passwd']) ) {
 }
 header('Last-Modified: ' . gmdate('D, d M Y H:i:s', filemtime(__FILE__)) . ' GMT');
 header("Cache-Control: public");
-header("Pragma: public");
+header("Pragma: public");*/
 ?>
 <!DOCTYPE HTML>
 <html>
