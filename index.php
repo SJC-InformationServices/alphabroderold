@@ -2,7 +2,7 @@
  
 require_once "archive/archive_config_inc.php";
 
-if((isset($_SERVER['PHP_AUTH_USER']) && ($_SERVER['PHP_AUTH_USER'] == "leon") ) AND (isset($_SERVER['PHP_AUTH_PW']) && ( $_SERVER['PHP_AUTH_PW'] == "secret" ))) {
+if ((isset($_SERVER['PHP_AUTH_USER']) && ($_SERVER['PHP_AUTH_USER'] == "leon") ) && (isset($_SERVER['PHP_AUTH_PW']) && ( $_SERVER['PHP_AUTH_PW'] == "secret" ))) {
 
 ?>
 <!DOCTYPE html>
@@ -1264,14 +1264,11 @@ if((isset($_SERVER['PHP_AUTH_USER']) && ($_SERVER['PHP_AUTH_USER'] == "leon") ) 
   
  </body>
 </html>
- <?php
-    }
-    else
-    {
+    <?php
+} else {
         //Send headers to cause a browser to request
         //username and password from user
-        header("WWW-Authenticate: " .
-            "Basic realm=\"Leon's Protected Area\"");
+        header("WWW-Authenticate: " . "Basic realm=\"Leon's Protected Area\"");
         header("HTTP/1.0 401 Unauthorized");
 
         //Show failure text, which browsers usually
@@ -1280,5 +1277,5 @@ if((isset($_SERVER['PHP_AUTH_USER']) && ($_SERVER['PHP_AUTH_USER'] == "leon") ) 
             "Authentication.<br>\nUse <b>leon</b> " .
             "for the username, and <b>secret</b> " .
             "for the password.<br>\n");
-    } 
+} 
 ?>
