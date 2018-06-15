@@ -34,7 +34,6 @@ require_once "archive/archive_config_inc.php";
 
  </head>
  <body class="yui3-skin-sam yui-skin-sam">
- <div><?php print_r($_SESSION); ?></div>
   <div id="archivehead" class="container-fluid">
         <div class="row row-eq-height">
          <div class="col-md-4">
