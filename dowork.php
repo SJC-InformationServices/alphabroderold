@@ -34,7 +34,7 @@ if (!isset($_SESSION['LOGGEDIN']) || !$_SESSION['LOGGEDIN'] ) {
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
  <head>
   <title>SJC Archive AB</title>
   <meta charset="utf-8">
@@ -62,19 +62,12 @@ if (!isset($_SESSION['LOGGEDIN']) || !$_SESSION['LOGGEDIN'] ) {
 
  </head>
  <body class="yui3-skin-sam yui-skin-sam">
-  <div id="archivehead" class="container-fluid">
-        <div class="row row-eq-height">
-         <div class="col-md-4">
-          <div class="archivecontent sjcLogo"></div>
-         </div>
-         <div class="col-md-4">
-          <div class="archivecontent"></div>
-         </div>
-         <div class="col-md-4">
-          <div class="archivecontent"></div>
-         </div>
-        </div>
-       </div>
+ <nav class="navbar navbar-light bg-faded">
+  <a class="navbar-brand" href="#">
+    <img src="https://s3.amazonaws.com/sjcarchiveassets/lib/images/logo.jpg" width="30" height="30" alt="">
+  </a>
+</nav>
+  
   <div id="archivebody" class="container-fluid">
         <div class="row">
          <div class="col-md-12">
