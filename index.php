@@ -2,7 +2,7 @@
  
 require_once "archive/archive_config_inc.php";
 
-if ((isset($_SERVER['PHP_AUTH_USER']) && ($_SERVER['PHP_AUTH_USER'] == "leon") ) && (isset($_SERVER['PHP_AUTH_PW']) && ( $_SERVER['PHP_AUTH_PW'] == "secret" ))) {
+//if ((isset($_SERVER['PHP_AUTH_USER']) && ($_SERVER['PHP_AUTH_USER'] == "leon") ) && (isset($_SERVER['PHP_AUTH_PW']) && ( $_SERVER['PHP_AUTH_PW'] == "secret" ))) {
 
 ?>
 <!DOCTYPE html>
