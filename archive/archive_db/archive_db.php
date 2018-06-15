@@ -21,7 +21,7 @@ trait archive_db{
 		$dbconn = new mysqli($this->archivedbserver, $this->archivedbuser, $this->archivedbpass,$this->archivedb);
 		if($dbconn->connect_errno)
 		{
-			$this->archiveDbError($dbconn->errno(),"Failed To Connect to DB","archive_db.php","15","Db Connection Fails");return FALSE;	
+			$this->archiveDbError($dbconn->errno,"Failed To Connect to DB","archive_db.php","15","Db Connection Fails");return FALSE;	
 		}
 		else{
 			$dbconn->select_db($this->archivedb);

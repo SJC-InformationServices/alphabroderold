@@ -13,18 +13,20 @@ ini_set('display_errors', 'On');
 
 
 $archiveconfig = array(
-	"archivedbserver"=>'sjc-archive-prod.cluster-cpi3jpipzm32.us-east-1.rds.amazonaws.com',
-	"archivedbuser"=>'sjcArchiveAlphaEasyCatalog',
-	"archivedbpass"=>'15BentonRoad!',
-	"archivedb"=>'sjcAlphaBroderArchive',
-	"archiveUrl"=>'http://localhost/archive/',
-	"ApiLogPath"=>"/archive_library/archive_logging/archive_logs/api_logs",
-	"SysLogPath"=>"/archive_library/archive_logging/archive_logs/sys_logs",
-	"archive_user"=>isset($_POST['email'])?$_POST['email'] : NULL,
-	"archive_pass"=>isset($_POST['pass'])?$_POST['pass'] : NULL,
-	"archive_file_storage_path"=>"/var/www/html/sjcPimitArchive/archive/archive_files/storage",
-	"archive_file_tmp"=>"/tmp"
-	);
+"archivedbserver"=>
+'sjc-archive-prod.cluster-cpi3jpipzm32.us-east-1.rds.amazonaws.com',
+"archivedbuser"=>'sjcWebAppsUsers',
+"archivedbpass"=>'15BentonRoad!',
+"archivedb"=>'sjcAlphaBroderArchive',
+"archiveUrl"=>'http://localhost/archive/',
+"ApiLogPath"=>"/archive_library/archive_logging/archive_logs/api_logs",
+"SysLogPath"=>"/archive_library/archive_logging/archive_logs/sys_logs",
+"archive_user"=>isset($_POST['email'])?$_POST['email'] : NULL,
+"archive_pass"=>isset($_POST['pass'])?$_POST['pass'] : NULL,
+"archive_file_storage_path"=>
+"/var/www/html/sjcPimitArchive/archive/archive_files/storage",
+"archive_file_tmp"=>"/tmp"
+);
 
 
 function login($username, $password) {
