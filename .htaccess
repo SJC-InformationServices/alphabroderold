@@ -10,9 +10,5 @@ RewriteRule ^/archive/alpha_colors/.*$. /archive/alpha_colors/index.php [L,P]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 
-AuthType Basic
-AuthName "sjcAlphaBroderArchive"
-AuthUserFile /etc/httpd/.htpasswd
-Require valid-user
 RewriteRule . index.php [L]
 i
