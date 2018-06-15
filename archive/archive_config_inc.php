@@ -1,8 +1,8 @@
 <?php
-$dir = sys_get_temp_dir();
+/*$dir = sys_get_temp_dir();
 session_save_path($dir);
 session_start();
-
+*/
 $root = $_SERVER["DOCUMENT_ROOT"];
 require_once "$root"."/vendor/autoload.php";
 
@@ -33,10 +33,10 @@ function login($username, $password) {
 	$d = $archiveconfig['archivedb'];
     try {
 		$conn = new Mysqli($s, $username, $password, $d, 3306);
-		$_SESSION['LOGGEDIN'] = "TRUE";
+		//$_SESSION['LOGGEDIN'] = "TRUE";
 		return true;
 	}catch(exception $e){
-		$_SESSION['ERROR'] = $e->message();
+		//$_SESSION['ERROR'] = $e->message();
 		return false;
 	}
   
