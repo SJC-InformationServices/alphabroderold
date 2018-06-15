@@ -25,8 +25,9 @@
  */ 
 require_once "archive/archive_config_inc.php";
 
-if(isset($_POST['username']) && isset($_POST['passwd']) ) {
-    if(login($_POST['username'], $POST['passwd']) ) {
+if (isset($_POST['username']) && isset($_POST['passwd']) ) {
+    if (login($_POST['username'], $POST['passwd']) ) {
+        $_SESSION['LOGGEDIN'] = true;
         header("Location: dowork.php");
     }
 }
