@@ -67,7 +67,41 @@ if (!isset($_SESSION['LOGGEDIN']) || !$_SESSION['LOGGEDIN'] ) {
     <img src="https://s3.amazonaws.com/sjcarchiveassets/lib/images/logo.jpg" alt="St.Joseph Communications">
   </a>
 </nav>
-  
+<ul class="nav nav-tabs" id="archiveTabs" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="products-tab" data-toggle="tab" href="#products" role="tab" aria-controls="home" aria-selected="true">Products</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="catalogs-tab" data-toggle="tab" href="#projects" role="tab" aria-controls="profile" aria-selected="false">Projects</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="attachments-tab" data-toggle="tab" href="#attachments" role="tab" aria-controls="contact" aria-selected="false">Attachments</a>
+  </li>
+</ul>
+<div class="tab-content" id="archiveTabContent">
+  <div class="tab-pane fade show active" id="products" role="tabpanel" aria-labelledby="home-tab">
+    <div class="container">
+      <div class="row">
+        <div class="col col-3">Tree</div>
+        <div class="col col">DT</div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="projects" role="tabpanel" aria-labelledby="profile-tab">
+  <div class="row">
+        <div class="col col-3">Tree</div>
+        <div class="col col">DT</div>
+      </div>
+  </div>
+  <div class="tab-pane fade" id="attachments" role="tabpanel" aria-labelledby="contact-tab">
+  <div class="row">
+        <div class="col col-3">Tree</div>
+        <div class="col col">DT</div>
+      </div>
+  </div>
+</div>  
+
+
   <div id="archivebody" class="container-fluid">
         <div class="row">
          <div class="col-md-12">
