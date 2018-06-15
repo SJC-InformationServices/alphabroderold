@@ -1,9 +1,9 @@
 RewriteEngine On
 
 #RewriteRule ^api/.*$ api.php [L]
-RewriteRule ^archive/alpha_styles/.*$ /archive/alpha_styles/index.php [L]
-RewriteRule ^archive/alpha_colors/.*$ /archive/alpha_catalogs/index.php [L]
-RewriteRule ^archive/alpha_catalogs/.*$ /archive/alpha_catalogs/index.php [L]
+RewriteRule ^archive/alpha_styles/.*$ products.php/alpha_styles/ [L]
+RewriteRule ^archive/alpha_colors/.*$ colors.php/alpha_colors/ [L]
+RewriteRule ^archive/alpha_catalogs/.*$ catalogs.php/alpha_catalogs/ [L]
 #RewriteRule ^sjcarchiveassets/.*$ https://s3.amazonaws.com/sjcarchiveassets/$1 [L,P]
 
 RewriteCond %{REQUEST_FILENAME} !-d
