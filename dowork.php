@@ -62,9 +62,9 @@ if (!isset($_SESSION['LOGGEDIN']) || !$_SESSION['LOGGEDIN'] ) {
 
  </head>
  <body class="yui3-skin-sam yui-skin-sam">
- <nav class="navbar navbar-light bg-faded">
+ <nav class="navbar navbar-dark bg-faded">
   <a class="navbar-brand" href="#">
-    <img src="https://s3.amazonaws.com/sjcarchiveassets/lib/images/logo.jpg" width="30" height="30" alt="">
+    <img src="https://s3.amazonaws.com/sjcarchiveassets/lib/images/logo.jpg" alt="St.Joseph Communications">
   </a>
 </nav>
   
