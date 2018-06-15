@@ -80,24 +80,36 @@ if (!isset($_SESSION['LOGGEDIN']) || !$_SESSION['LOGGEDIN'] ) {
 </ul>
 <div class="tab-content" id="archiveTabContent">
   <div class="tab-pane fade show active" id="products" role="tabpanel" aria-labelledby="home-tab">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col col-3">Tree</div>
-        <div class="col col">DT</div>
+        <div class="col col-2" id="productsTreeContent">
+          <div id="productsTree"></div>
+        </div>
+        <div class="col col" id="productsTableContent">
+          <table id="productsTable" class="cell-border compact stripe">
+                <thead>
+                    <th>brand</th>
+                </thead>
+          </table>
+        </div>
       </div>
     </div>
   </div>
   <div class="tab-pane fade" id="projects" role="tabpanel" aria-labelledby="profile-tab">
-  <div class="row">
-        <div class="col col-3">Tree</div>
-        <div class="col col">DT</div>
+  <div class="container-fluid">
+      <div class="row">
+        <div class="col col-2" id="projectsTreeContent">Tree</div>
+        <div class="col col" id="projectsTableContent">DT</div>
       </div>
+    </div>
   </div>
   <div class="tab-pane fade" id="attachments" role="tabpanel" aria-labelledby="contact-tab">
-  <div class="row">
-        <div class="col col-3">Tree</div>
-        <div class="col col">DT</div>
+  <div class="container-fluid">
+      <div class="row">
+        <div class="col col-2" id="attachmentsTreeContent">Tree</div>
+        <div class="col col" id="attachmentsTableContent">DT</div>
       </div>
+    </div>
   </div>
 </div>  
 
@@ -466,7 +478,7 @@ if (!isset($_SESSION['LOGGEDIN']) || !$_SESSION['LOGGEDIN'] ) {
    };
 
  var oCurrentProductNode = null;
- productTree = new YUI2.widget.TreeView('productTree-'+productId);
+ productTree = new YUI2.widget.TreeView('productsTree');
  productTree.setDynamicLoad(loadProductData);
  
  var assignProduct = function(o){
