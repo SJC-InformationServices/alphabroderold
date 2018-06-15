@@ -1,14 +1,14 @@
 <?php
-foreach (glob("../archive_includes/*.php") as $filename)
+foreach (glob($root."/archive/archive_includes/*.php") as $filename)
 {
-    if(is_file("../archive_includes/$filename")){	
+    if(is_file($root."/archive/archive_includes/$filename")){	
     	include $filename;
 	}
 }
-include "../archive_db/archive_db.php";
-include "../archive_events/archive_events.php";
-include "../archive_users/archive_users.php";
-include "../archive_log/archive_log.php";
+include $root."/archive/archive_db/archive_db.php";
+include $root."/archive/archive_events/archive_events.php";
+include $root."/archive/archive_users/archive_users.php";
+include $root."/archive/archive_log/archive_log.php";
 abstract class archive_api
 {
 	use archive_db;

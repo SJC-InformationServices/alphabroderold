@@ -91,7 +91,7 @@ public function __construct($request, $origin,$configs) {
 		{
 			$verb = $this->archivedb->real_escape_string($this->verb);
 			$args = count($this->args) > 0 ? $this->args[0]:array();
-			array_push($filters,"`abstyleid`='$verb'");
+			array_push($filters,"`id`='$verb'");
 		}
 		else{
 			$args = array();
@@ -123,7 +123,7 @@ public function __construct($request, $origin,$configs) {
 		{
 			$verb = $this->archivedb->real_escape_string($this->verb);
 			$args = count($this->args) > 0 ? $this->args[0]:array();
-			array_push($filters,"`abstyleid`='$verb'");
+			array_push($filters,"`id`='$verb'");
 		}
 		else{
 			$args = array();
@@ -157,7 +157,7 @@ public function __construct($request, $origin,$configs) {
 		else{
 			$select = '*';
 		}				
-		$sql = "select $select from `abcolors`";
+		$sql = "select $select from `colors`";
 			
 		if(count($args['filters']) > 0){
 			$sql .= " where ".implode(" and",$args['filters']);
@@ -206,7 +206,7 @@ public function __construct($request, $origin,$configs) {
 	}
 	protected function updateColors($args){
 		$this->archive_log_write(json_encode($args));						
-		$sql = "update `abcolors` set ";
+		$sql = "update `colors` set ";
 		
 		if(isset($args['attributes'])){
 			//array_walk($args['attributes'],'$this->archivedb->real_escape_string');
