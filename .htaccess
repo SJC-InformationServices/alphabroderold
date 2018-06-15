@@ -9,4 +9,5 @@ RewriteRule ^/archive/alpha_colors/.*$. /archive/alpha_colors/index.php [L,P]
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule . work.php [L]
+RewriteRule . index.php [L]
+i
