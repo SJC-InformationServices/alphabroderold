@@ -2,3 +2,4 @@ lib/
 deploy/
 vendor/
 .htpasswd
+.desktop.ini
