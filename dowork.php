@@ -27,8 +27,8 @@ require_once "archive/archive_config_inc.php";
 if (!isset($_SESSION['LOGGEDIN']) || !$_SESSION['LOGGEDIN'] ) {
     $_SESSION['LOGGEDIN'] = true;
     header("Location: index.php");
-}else{
-  session_regenerate_id();
+} else {
+    session_regenerate_id();
 }
 
 

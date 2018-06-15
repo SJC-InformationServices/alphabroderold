@@ -72,7 +72,7 @@ public function __construct($request, $origin,$configs) {
 				foreach($values as $k=>$v){
 					$values[$k]=$this->archivedb->real_escape_string($v);
 				}
-				$sql = "insert into `abstyles` (`".implode("`,`",$keys)."`) values ('".implode("','",$values)."')";
+				$sql = "insert into `products` (`".implode("`,`",$keys)."`) values ('".implode("','",$values)."')";
 				$qry = $this->archiveQryDb($sql);		
 		if($qry)
 		{
@@ -114,7 +114,7 @@ public function __construct($request, $origin,$configs) {
 		{
 			$verb = $this->archivedb->real_escape_string($this->verb);
 			$args = count($this->args) > 0 ? $this->args[0]:array();
-			array_push($filters,"`abstyleid`='$verb'");
+			array_push($filters,"`id`='$verb'");
 		}
 		else{
 			$args = array();
@@ -147,7 +147,7 @@ public function __construct($request, $origin,$configs) {
 		{
 			$verb = $this->archivedb->real_escape_string($this->verb);
 			$args = count($this->args) > 0 ? $this->args[0]:array();
-			array_push($filters,"`abstyleid`='$verb'");
+			array_push($filters,"`id`='$verb'");
 		}
 		else{
 			$args = array();
@@ -180,7 +180,7 @@ public function __construct($request, $origin,$configs) {
 		{
 			$verb = $this->archivedb->real_escape_string($this->verb);
 			$args = count($this->args) > 0 ? $this->args[0]:array();
-			array_push($filters,"`abstyleid`='$verb'");
+			array_push($filters,"`id`='$verb'");
 		}
 		else{
 			$args = array();
@@ -208,7 +208,7 @@ public function __construct($request, $origin,$configs) {
 		else{
 			$select = '*';
 		}				
-		$sql = "select $select from `abstyles`";
+		$sql = "select $select from `products`";
 			
 		if(count($args['filters']) > 0){
 			$sql .= " where ".implode(" and ",$args['filters']);
@@ -268,7 +268,7 @@ public function __construct($request, $origin,$configs) {
 	}
 protected function updateStyles($args){
 									
-		$sql = "update `abstyles` set ";
+		$sql = "update `products` set ";
 		
 		if(isset($args['attributes'])){
 			//array_walk($args['attributes'],'$this->archivedb->real_escape_string');
