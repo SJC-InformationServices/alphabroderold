@@ -1,10 +1,10 @@
 <?php
-$dir = sys_get_temp_dir();
-session_save_path($dir);
+$archiveTmp = sys_get_temp_dir();
+session_save_path($archiveTmp);
 session_start();
 
-$root = $_SERVER["DOCUMENT_ROOT"];
-require_once "$root"."/vendor/autoload.php";
+$archiveroot = $_SERVER["DOCUMENT_ROOT"];
+require_once "$archiveroot"."/vendor/autoload.php";
 
 
 error_reporting(E_ERROR | E_WARNING | E_PARSE);

@@ -1,6 +1,6 @@
 <?php
 include "archive/archive_config_inc.php";
-include $root."/archive/alpha_styles/alpha_styles.php";
+include $archiveroot."/archive/alpha_styles/alpha_styles.php";
 
 $path = ltrim($_SERVER['REQUEST_URI'], '/');    // Trim leading slash(es)
 $name = 'alpha_styles';
