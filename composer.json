@@ -3,6 +3,8 @@
     "description": "A Simple GUI base ORM, backend as a service",
     "require": {
         "gabordemooij/redbean": "^5.1",
-        "lcobucci/jwt": "^3.2"
+        "lcobucci/jwt": "^3.2",
+        "monolog/monolog": "^1.23",
+        "aws/aws-sdk-php": "^3.61"
     }
 }
