@@ -1,0 +1,30 @@
+2018-06-18 01:08:30-------
+{"data":{"attributes":["season","catalog_name"],"groupby":"true","sort":[["season","asc"],["catalog_name","asc"]]}}
+End
+2018-06-18 01:08:30-------
+select `season`,`catalog_name` from `masterdataview` group by `season`,`catalog_name` order by `season` asc, `catalog_name` asc
+End
+2018-06-18 01:15:08-------
+{"data":{"attributes":["season","catalog_name"],"groupby":"true","sort":[["season","asc"],["catalog_name","asc"]]}}
+End
+2018-06-18 01:15:08-------
+select `season`,`catalog_name` from `masterdataview` group by `season`,`catalog_name` order by `season` asc, `catalog_name` asc
+End
+2018-06-18 01:17:58-------
+{"data":{"attributes":["season","catalog_name"],"groupby":"true","sort":[["season","asc"],["catalog_name","asc"]]}}
+End
+2018-06-18 01:17:58-------
+select `season`,`catalog_name` from `masterdataview` group by `season`,`catalog_name` order by `season` asc, `catalog_name` asc
+End
+2018-06-18 01:30:42-------
+{"data":{"attributes":["season","catalog_name"],"groupby":"true","sort":[["season","asc"],["catalog_name","asc"]]}}
+End
+2018-06-18 01:30:42-------
+select `season`,`catalog_name` from `masterdataview` group by `season`,`catalog_name` order by `season` asc, `catalog_name` asc
+End
+2018-06-18 01:31:44-------
+{"data":{"attributes":["season","catalog_name"],"groupby":"true","sort":[["season","asc"],["catalog_name","asc"]]}}
+End
+2018-06-18 01:31:44-------
+select `season`,`catalog_name` from `masterdataview` group by `season`,`catalog_name` order by `season` asc, `catalog_name` asc
+End

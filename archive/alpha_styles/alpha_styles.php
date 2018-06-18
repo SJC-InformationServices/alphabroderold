@@ -72,6 +72,7 @@ public function __construct($request, $origin,$configs) {
 				foreach($values as $k=>$v){
 					$values[$k]=$this->archivedb->real_escape_string($v);
 				}
+				
 				$sql = "insert into `products` (`".implode("`,`",$keys)."`) values ('".implode("','",$values)."')";
 				$qry = $this->archiveQryDb($sql);		
 		if($qry)
@@ -87,7 +88,7 @@ public function __construct($request, $origin,$configs) {
 					$value = $this->archivedb->real_escape_string($v);
 					$operator = "=";
 					//array_push($filters,"(`aasid`) in (select `aavaasid` from `aav`,`aad` where (`aavaadid` = `aadid` and `aadname`='$attrib') and (lower(`aavvalue`) $operator lower('$value')))");
-					array_push($filters,"upper(`$attrib`) $operator upper('$value')");
+					array_push($filters,"upper(`rawdata`->>'\$.$attrib') $operator upper('$value')");
 			}
 			$arg['filters']=$filters;
 			return $this->readStyles($args);
@@ -127,7 +128,7 @@ public function __construct($request, $origin,$configs) {
 			$value = $this->archivedb->real_escape_string($filter['value']);
 			$operator = $filter['operator'];
 			//array_push($filters,"(`aasid`) in (select `aavaasid` from `aav`,`aad` where (`aavaadid` = `aadid` and `aadname`='$attrib') and (lower(`aavvalue`) $operator lower('$value')))");
-			array_push($filters,"upper(`$attrib`) $operator upper('$value')");
+			array_push($filters,"upper(`rawdata`->>'\$.$attrib') $operator upper('$value')");
 			}
 		}	
 		$args['filters'] = $filters;
@@ -160,7 +161,7 @@ public function __construct($request, $origin,$configs) {
 			$value = $this->archivedb->real_escape_string($filter['value']);
 			$operator = $filter['operator'];
 			//array_push($filters,"(`aasid`) in (select `aavaasid` from `aav`,`aad` where (`aavaadid` = `aadid` and `aadname`='$attrib') and (lower(`aavvalue`) $operator lower('$value')))");
-			array_push($filters,"upper(`$attrib`) $operator upper('$value')");
+			array_push($filters,"upper(`rawdata`->>'\$.$attrib') $operator upper('$value')");
 			}
 		}	
 		$args['filters'] = $filters;
@@ -193,7 +194,7 @@ public function __construct($request, $origin,$configs) {
 			$value = $this->archivedb->real_escape_string($filter['value']);
 			$operator = $filter['operator'];
 			//array_push($filters,"(`aasid`) in (select `aavaasid` from `aav`,`aad` where (`aavaadid` = `aadid` and `aadname`='$attrib') and (lower(`aavvalue`) $operator lower('$value')))");
-			array_push($filters,"upper(`$attrib`) $operator upper('$value')");
+			array_push($filters,"upper(`rawdata`->>'\$.$attrib') $operator upper('$value')");
 			}
 		}	
 		$args['filters'] = $filters;
