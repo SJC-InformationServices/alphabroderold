@@ -1,6 +1,6 @@
 <?php
 trait archive_log{
-	public $archive_log_path = "$archiveroot/archive/archive_log/logs";
+	public $archive_log_path = __DIR__."/logs";
 	public $archive_log_file = "archive_log.php";
 	
 	function archive_log_read(){

@@ -6,6 +6,7 @@ $path = ltrim($_SERVER['REQUEST_URI'], '/');    // Trim leading slash(es)
 $name = 'alpha_styles';
 
 $path = substr($path,strpos($path,$name));
+
 try{
 	$API = new archive($path, null,$archiveconfig);
     echo $API->processAPI();
