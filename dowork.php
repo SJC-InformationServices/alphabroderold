@@ -207,12 +207,47 @@ var productsTree,projectsTree,attachmentsTree;
  var attachmentsTableElement = Y.one("#attachmentsTable");
  attachmentsTableElement.appendChild(Y.Node.create('<th>'+attachmentscols.join("</th><th>")));
 
-var stylesActions = {"allbrands":[]};
-var productActions = {};
-var attachmentsActions = {};
+var productsActions = {
+  "allbrands":{},
+  "allstyles":function(){
+    var verb = encodeURIComponent(Y.JSON.stringify({"attributes":["abstyle"],"groupby":"true","sort":[["abstyle","asc"]]}));
+      var url = "/alpha_styles/?data="+verb;
+      complete = function(id,response){
+       var d = Y.JSON.parse(response.responseText);
+       for(var i=0;i<d.length;i++)
+       {
+        var newNodeObja = {type:'Text',label:d[i].abstyle,isLeaf:false,editable:true,archiveHierarchy:["alpha_colors","colorsbystyle"]};
+        var na = new YUI2.widget.TextNode(newNodeObja, node, false);
+       }       
+      return};
+  }
+  };
+var projectActions = {
+  'seasons':""
+};
+var attachmentsActions = {
 
-var loadTree=function() {
+};
 
+var loadTree=function(node,fnLoadComplete) {
+  var label = node.label;
+  var sendRequest=true;
+    
+   var nodeData = node.data;
+   var hierarchy = nodeData.archiveHierarchy;
+   switch(hierarchy[0]){
+     case "alpha_styles":
+     var ev = productsActions;
+     break;
+     case "alpha_colors":
+     var ev = productActions;
+     break;
+     case "alpha_catalogs":
+     var ev = projectActions;
+     break;
+   }
+
+   fnLoadComplete();
 };
 var activeNode = null;
 
@@ -237,6 +272,9 @@ var productStylesObj = {
 };
 var productStylesNode = new YUI2.widget.TextNode(productStylesObj, productTree.getRoot(), false);
 productTree.draw();
+
+projectsTree = new YUI2.widget.TreeView('projectsTree-'+catalogId);
+projectsTree.setDynamicLoad(loadTree);
 
 
 }
