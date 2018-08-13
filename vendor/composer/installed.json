@@ -44,17 +44,17 @@
     },
     {
         "name": "lcobucci/jwt",
-        "version": "3.2.2",
-        "version_normalized": "3.2.2.0",
+        "version": "3.2.4",
+        "version_normalized": "3.2.4.0",
         "source": {
             "type": "git",
             "url": "https://github.com/lcobucci/jwt.git",
-            "reference": "0b5930be73582369e10c4d4bb7a12bac927a203c"
+            "reference": "c9704b751315d21735dc98d78d4f37bd73596da7"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/lcobucci/jwt/zipball/0b5930be73582369e10c4d4bb7a12bac927a203c",
-            "reference": "0b5930be73582369e10c4d4bb7a12bac927a203c",
+            "url": "https://api.github.com/repos/lcobucci/jwt/zipball/c9704b751315d21735dc98d78d4f37bd73596da7",
+            "reference": "c9704b751315d21735dc98d78d4f37bd73596da7",
             "shasum": ""
         },
         "require": {
@@ -72,7 +72,7 @@
         "suggest": {
             "mdanter/ecc": "Required to use Elliptic Curves based algorithms."
         },
-        "time": "2017-09-01T08:23:26+00:00",
+        "time": "2018-08-03T11:23:50+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {

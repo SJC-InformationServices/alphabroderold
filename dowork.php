@@ -209,18 +209,7 @@ var productsTree,projectsTree,attachmentsTree;
 
 var productsActions = {
   "allbrands":{},
-  "allstyles":function(){
-    var verb = encodeURIComponent(Y.JSON.stringify({"attributes":["abstyle"],"groupby":"true","sort":[["abstyle","asc"]]}));
-      var url = "/alpha_styles/?data="+verb;
-      complete = function(id,response){
-       var d = Y.JSON.parse(response.responseText);
-       for(var i=0;i<d.length;i++)
-       {
-        var newNodeObja = {type:'Text',label:d[i].abstyle,isLeaf:false,editable:true,archiveHierarchy:["alpha_colors","colorsbystyle"]};
-        var na = new YUI2.widget.TextNode(newNodeObja, node, false);
-       }       
-      return};
-  }
+  "allstyles":{}
   };
 var projectActions = {
   'seasons':""
@@ -235,19 +224,64 @@ var loadTree=function(node,fnLoadComplete) {
     
    var nodeData = node.data;
    var hierarchy = nodeData.archiveHierarchy;
-   switch(hierarchy[0]){
-     case "alpha_styles":
-     var ev = productsActions;
+  
+   var ha = hierarchy[0];
+   var hb = hierarchy[2];
+
+   switch(ha[0]){
+     case "styles":
+      switch(hb)
+      {
+        case 'allstyles':
+        var loaddata = true;
+        var verb = encodeURIComponent(Y.JSON.stringify({"attributes":["abstyle"],"groupby":"true","sort":[["abstyle","asc"]]}));
+        var url = "/alpha_styles/?data="+verb;
+        complete = function(id,response){
+        var d = Y.JSON.parse(response.responseText);
+        for(var i=0;i<d.length;i++)
+        {
+          var newNodeObja = {type:'Text',label:d[i].abstyle,isLeaf:false,editable:true,archiveHierarchy:["alpha_colors","colorsbystyle"]};
+          var na = new YUI2.widget.TextNode(newNodeObja, node, false);
+        }       
+        fnLoadComplete();};
+        break;
+        case 'allbrands':
+        var loaddata = true;
+        var verb = encodeURIComponent(Y.JSON.stringify({"attributes":["brand"],"groupby":"true","sort":[["brand","asc"]]}));
+      var url = "/alpha_styles/?data="+verb;
+      complete = function(id,response){
+       var d = Y.JSON.parse(response.responseText);
+       for(var i=0;i<d.length;i++)
+       {
+        var newNodeObja = {type:'Text',label:d[i].brand,isLeaf:false,editable:true,archiveHierarchy:["alpha_styles","brands"]};
+        var na = new YUI2.widget.TextNode(newNodeObja, node, false);
+       }       
+       fnLoadComplete();};
+        break;
+      }     
      break;
-     case "alpha_colors":
-     var ev = productActions;
+     case "projects":
+     
      break;
-     case "alpha_catalogs":
-     var ev = projectActions;
+     case "colors":
+     
      break;
    }
+  
+   if(!loaddata)
+   {
+     fnLoadComplete();
+   }
+   else{
+    Y.io("archive"+verb,{
+    headers: {'Content-Type': 'application/json'},
+    on:{
+    success:complete,
+    failure:function(id,response){
+       fnLoadComplete();
+    }}});
+   }
 
-   fnLoadComplete();
 };
 var activeNode = null;
 
@@ -268,12 +302,12 @@ var productStylesObj = {
   label: 'All Styles',
   isLeaf: false,
   editable: true,
-  archiveHierarchy: ["alpha_styles", "allstyles"]
+  archiveHierarchy: ["styles", "allstyles"]
 };
 var productStylesNode = new YUI2.widget.TextNode(productStylesObj, productTree.getRoot(), false);
 productTree.draw();
 
-projectsTree = new YUI2.widget.TreeView('projectsTree-'+catalogId);
+projectsTree = new YUI2.widget.TreeView('projectsTree');
 projectsTree.setDynamicLoad(loadTree);
 
 

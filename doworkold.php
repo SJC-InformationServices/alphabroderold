@@ -512,7 +512,7 @@ if (!isset($_SESSION['LOGGEDIN']) || !$_SESSION['LOGGEDIN'] ) {
    var onTriggerContextMenu = function(p_oEvent){
   var oTarget = this.contextEventTarget;
   
-  var node = productTree.getNodeByElement(oTarget);
+  var node = productTree.getNodedByElement(oTarget);
   if(!node){this.cancel();return;}
   var nodeData = node.data;
    var hierarchy = nodeData.archiveHierarchy;
